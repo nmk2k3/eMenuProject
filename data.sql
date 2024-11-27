@@ -1,0 +1,90 @@
+insert into category (ID, name) values 
+(1, 'Main'),
+(2, 'Sub'),
+(3,'Dessert');
+
+insert into origin (ID, name) values
+(1, 'Italy'),
+(2, 'India'),
+(3, 'Vietnam'),
+(4, 'Mexico'),
+(5, 'France'),
+(6, 'Japan'),
+(7, 'Spain'),
+(8, 'USA'),
+(9, 'South Korea');
+
+insert into dish (ID, name, price, available, originID, categoryID) values
+(1, 'Spaghetti Bolognese', 15, 1, 1, 1),
+(2, 'Chicken Tikka Masala', 12, 1, 2, 1),
+(3, 'Beef Pho', 10, 1, 3, 1),
+(4, 'Chicken Quesadilla', 8, 0, 4, 1),
+(5, 'Margherita Pizza', 10, 1, 1, 1),
+(6, 'Chocolate Mousse', 7, 1, 5, 3),
+(7, 'Sushi Maki', 18, 0, 6, 1),
+(8, 'Churros', 8, 1, 7, 3),
+(9, 'Caesar Salad', 7, 1, 8, 2),
+(10, 'Bibimbap', 15, 1, 9, 1);
+
+insert into ingredient (ID, name, quantity, imported_date, expired_date, unit) values
+(1, 'Olive Oil', 50, '2023-05-01', '2023-11-01', 'Liters'),
+(2, 'Garlic', 10, '2023-05-05', '2023-08-05', 'Kilograms'),
+(3, 'Ground Beef', 80, '2023-06-10', '2023-06-20', 'Kilograms'),
+(4, 'Tomato Sauce', 100, '2023-05-15', '2023-11-15', 'Liters'),
+(5, 'Spaghetti Pasta', 100, '2023-06-01', '2023-12-01', 'Kilograms'),
+(6, 'Chicken Breast', 80, '2023-06-10', '2023-06-20', 'Kilograms'),
+(7, 'Tikka Masala Sauce', 60, '2023-05-20', '2023-11-20', 'Liters'),
+(8, 'Rice Noodles', 30, '2023-04-15', '2023-10-15', 'Kilograms'),
+(9, 'Beef Slices', 50, '2023-05-25', '2023-11-25', 'Kilograms'),
+(10, 'Chicken Breast', 25, '2023-04-15', '2023-06-15', 'Kilograms'),
+(11, 'Cheese', 15, '2023-04-22', '2023-08-22', 'Kilograms'),
+(12, 'Beef', 40, '2023-05-22', '2023-11-22', 'Kilograms'),
+(13, 'Basil', 5, '2023-05-30', '2023-06-15', 'Kilograms'),
+(14, 'Chocolate', 20, '2023-05-10', '2023-11-10', 'Kilograms'),
+(15, 'Heavy Cream', 25, '2023-05-12', '2023-08-12', 'Liters'),
+(16, 'Rice Vinegar', 10, '2023-04-20', '2023-10-20', 'Liters'),
+(17, 'Seaweed', 100, '2023-04-25', '2023-10-25', 'Packs'),
+(18, 'Sushi Rice', 25, '2023-04-20', '2023-10-20', 'Kilograms'),
+(19, 'Flour', 60, '2023-06-01', '2023-12-01', 'Kilograms'),
+(20, 'Sugar', 30, '2023-05-15', '2023-10-15', 'Kilograms'),
+(21, 'Cinnamon', 5, '2023-06-10', '2023-12-10', 'Kilograms'),
+(22, 'Lettuce', 45, '2023-06-05', '2023-07-05', 'Kilograms'),
+(23, 'Croutons', 15, '2023-06-15', '2023-12-15', 'Kilograms'),
+(24, 'Parmesan Cheese', 10, '2023-05-25', '2023-11-25', 'Kilograms'),
+(25, 'Rice', 50, '2023-04-15', '2023-10-15', 'Kilograms'),
+(26, 'Kimchi', 20, '2023-05-20', '2023-11-20', 'Kilograms');
+
+insert into recipe (dishID, ingredientID) values
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(2, 6),
+(2, 7),
+(2, 1),
+(3, 8),
+(3, 9),
+(4, 10),
+(4, 11),
+(4, 2),
+(5, 4),
+(5, 11),
+(5, 13),
+(6, 14),
+(6, 15),
+(7, 16),
+(7, 17),
+(7, 18),
+(8, 19),
+(8, 20),
+(8, 21),
+(9, 22),
+(9, 23),
+(9, 24),
+(10, 25),
+(10, 26),
+(10, 12);
+
+
+

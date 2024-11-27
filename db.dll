@@ -1,0 +1,41 @@
+create table origin (
+	ID int,
+    name varchar(255) not null,
+    primary key (ID)
+);
+
+create table category (
+	ID int,
+    name varchar(255) not null,
+    primary key (ID)
+);
+
+create table dish (
+  ID int,
+  name varchar(255) not null,
+  price int not null,
+  available boolean not null,
+  originID int,
+  categoryID int,
+  primary key (ID),
+  foreign key (originID) references origin(ID),
+  foreign key (categoryID) references category(ID)
+);
+
+create table ingredient (
+	ID int,
+    name varchar(255) not null,
+    quantity int,
+    imported_date date,
+    expired_date date,
+    unit varchar(50),
+    primary key(ID)
+);
+
+create table recipe (
+	dishID int,
+    ingredientID int,
+    primary key (dishID, ingredientID),
+    foreign key (dishID) references dish(ID),
+	foreign key (ingredientID) references ingredient(ID)
+);
